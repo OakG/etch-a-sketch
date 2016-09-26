@@ -5,3 +5,25 @@ body {
 h1 {
     color: #999999;
 }
+
+.top {
+
+}
+
+.board {
+    margin: 40px auto;
+}
+
+.dot {
+    width: 25px;
+    height: 25px;
+    background-color: silver;
+    display: inline-block;
+}
+
+.ndot {
+    width: 25px;
+    height: 25px;
+    background-color: blue;
+    display: inline-block;
+}
