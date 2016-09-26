@@ -11,6 +11,7 @@ h1 {
 }
 
 .board {
+    width: 600px;
     margin: 40px auto;
 }
 
@@ -18,12 +19,5 @@ h1 {
     width: 25px;
     height: 25px;
     background-color: silver;
-    display: inline-block;
-}
-
-.ndot {
-    width: 25px;
-    height: 25px;
-    background-color: blue;
-    display: inline-block;
+    float: left;
 }
