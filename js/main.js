@@ -1,10 +1,22 @@
 //jQuery
 $(document).ready(function() {
-    $('#16x16').on('click', function() {
-        for (var i = 0; i < 15; i++) {
-                $('.board').append('<div class="dot"></div>');
-        } // Only makes a line
+    var board = 512;
+    // Game board width,
+    // board/nDots whereas nDots = rows
+//    var nDots = 16;
+    //First value
+    var generateDots = function(nDots) {
+        var nRows = board/nDots;
+        var defDot = "<div class="edots"></div>";
+        //var dotDiv = '<div class="pixel"></div>';
+        for (var i = 0; i < nRows - 1; i++) {
+            $('.board').append(defDot);
+        }
+    };
 
-    });
+$('.wrapper').on('click', 'button', function() {
+    generateDots(16);
+});
+
 
 });

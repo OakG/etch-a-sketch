@@ -1,23 +1,23 @@
+.wrapper {
+    margin: 40px auto;
+}
 body {
     background-color: black;
 }
-
+.edots {
+    position: relative;
+    float: left;
+    background-color: blue;
+    width: 25px;
+}
 h1 {
     color: #999999;
-}
-
-.top {
-
+    text-align: center;
 }
 
 .board {
-    width: 600px;
-    margin: 40px auto;
-}
-
-.dot {
-    width: 25px;
-    height: 25px;
-    background-color: silver;
-    float: left;
+    margin: 0 auto;
+    height: 512px;
+    width: 512px;
+    background-color: #999999;
 }
