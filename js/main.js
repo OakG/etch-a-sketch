@@ -1,22 +1,27 @@
-//jQuery
-$(document).ready(function() {
-    var board = 512;
-    // Game board width,
-    // board/nDots whereas nDots = rows
-//    var nDots = 16;
-    //First value
-    var generateDots = function(nDots) {
-        var nRows = board/nDots;
-        var defDot = "<div class="edots"></div>";
-        //var dotDiv = '<div class="pixel"></div>';
-        for (var i = 0; i < nRows - 1; i++) {
-            $('.board').append(defDot);
+//Reseting the game board
+//while elements in .board > 0
+//remove .gameSqm (paintable dots in the game)
+boardSize = 512;
+boardWidth = 16;
+var generateBoard = function(boardWidth) {
+    eleNumber = $(".board").length;
+
+    var clearBoard = function() {
+        while (eleNumber > 1) {
+            $(".board").remove(".gameSqm");
         }
+    }
+
+    clearBoard();
+
+    rows = 512/boardWidth;
+
+    for (var i = 0; i < rows; i++) {
+        for (var j = 0; j < rows; j++) {
+            $(".board").append("<div class='gameSqm'></div>");
+        };
     };
 
-$('.wrapper').on('click', 'button', function() {
-    generateDots(16);
-});
+}
 
-
-});
+generateBoard(4);

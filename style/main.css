@@ -4,11 +4,9 @@
 body {
     background-color: black;
 }
-.edots {
-    position: relative;
+.gameSqm {
     float: left;
     background-color: blue;
-    width: 25px;
 }
 h1 {
     color: #999999;
