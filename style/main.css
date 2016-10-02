@@ -1,0 +1,15 @@
+div {
+    border: 1px solid black;
+}
+
+.board {
+    width: 512px;
+    height: 512px;
+    margin: 30px auto;
+    display: block;
+}
+
+.dot {
+    margin-top: 0px;
+    display: block;
+}
