@@ -6,10 +6,10 @@ div {
     width: 512px;
     height: 512px;
     margin: 30px auto;
-    display: block;
+
 }
 
 .dot {
     margin-top: 0px;
-    display: block;
+    float: left;
 }
