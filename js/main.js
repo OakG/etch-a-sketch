@@ -16,6 +16,17 @@ $(document).ready(function() {
             //pastes it 16 times
         }
 
+        dotSize = board/16 + "px";
+            $('.dot').css({"width" : dotSize, "height" : dotSize});
+            //Sizes each dot accodingly
+
+        $('.dot').hover(function() {
+            $(this).css("background-color", "black");
+        });
+    });
+
+    $('#clearBoard').on('click', function() {
+        $('.dot').css("background-color", "");
     });
 
 });

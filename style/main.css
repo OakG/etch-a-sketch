@@ -1,15 +1,18 @@
-div {
-    border: 1px solid black;
-}
-
 .board {
     width: 512px;
     height: 512px;
     margin: 30px auto;
+    border: 1px dashed blue;
+
 
 }
 
 .dot {
-    margin-top: 0px;
+    padding: 0;
+    display: inline-block;
     float: left;
+}
+
+.colored {
+    background-color: blue;
 }
