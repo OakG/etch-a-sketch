@@ -7,7 +7,7 @@ $(document).ready(function() {
         var board = 512;
         var dotSize = board/uinput + "px";
 
-        $('.board').empty(); //removes previous divs in the board
+        $('.board').empty(); //removes previous divs inside the board
 
         for (i = 0; i < uinput ; i++) {
             pasteStr = pasteStr + defDiv;
@@ -21,7 +21,7 @@ $(document).ready(function() {
 
         $('.dot').css({"width" : dotSize, "height" : dotSize}); //Sizes each dot accordingly
 
-        $('.dot').hover(function() {
+        $('.dot').on('mouseenter', function() {
             $(this).css("background-color", "black");
         });
 
