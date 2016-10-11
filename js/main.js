@@ -42,6 +42,9 @@ $(document).ready(function() {
 
     $('#custom').on('click', function() {
         var uinput = prompt('Width of the desired board?');
+        while (uinput < 1) {
+            var uinput = prompt('Enter a number bigger than 1');
+        }
         generateBoard(uinput);
     });
 
