@@ -1,18 +1,18 @@
+.navigation {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
 .board {
     width: 512px;
     height: 512px;
-    margin: 30px auto;
+    margin: 15px auto;
     border: 1px dashed blue;
-
-
 }
 
 .dot {
     padding: 0;
     display: inline-block;
     float: left;
-}
-
-.colored {
-    background-color: blue;
 }

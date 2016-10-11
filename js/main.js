@@ -1,32 +1,49 @@
 $(document).ready(function() {
-    board = 512;
 
-    $('#defButton').on('click', function() {
+    function generateBoard(uinput) {
 
         var defDiv = '<div class="dot"></div>';
-        var pasteStr = ""
-        $('.board').empty(); //resets the board
+        var pasteStr = "";
+        var board = 512;
+        var dotSize = board/uinput + "px";
 
-        for (i = 0; i < 16; i++) {
+        $('.board').empty(); //removes previous divs in the board
+
+        for (i = 0; i < uinput ; i++) {
             pasteStr = pasteStr + defDiv;
             //generates a string with a 'row' of divs
         }
-        for (j = 0; j < 16; j++) {
+
+        for (j = 0; j < uinput; j++) {
             $('.board').append(pasteStr);
-            //pastes it 16 times
+            //pastes it n times
         }
 
-        dotSize = board/16 + "px";
-            $('.dot').css({"width" : dotSize, "height" : dotSize});
-            //Sizes each dot accodingly
+        $('.dot').css({"width" : dotSize, "height" : dotSize}); //Sizes each dot accordingly
 
         $('.dot').hover(function() {
             $(this).css("background-color", "black");
         });
+
+    }
+
+
+    $('#defButton').on('click', function() {
+        generateBoard(16);
+    });
+
+    $('#x32').on('click', function() {
+        generateBoard(32);
     });
 
     $('#clearBoard').on('click', function() {
         $('.dot').css("background-color", "");
     });
+
+    $('#custom').on('click', function() {
+        var uinput = prompt('Width of the desired board?');
+        generateBoard(uinput);
+    });
+
 
 });
